@@ -1,11 +1,14 @@
-li{
-  color: red;
+#top{
+  border: 4px solid blue;
+  width: 25%;
+  text-align: center;
+  /* top, right, bottom, cnter */
+  margin: auto;
 }
 
-.topitems{
-  color: blue;
-}
-
-#two{
-  border: 3px solid black;
+#bottom{
+  border: 4px solid red;
+  width: 50%;
+  padding: 200px;
+  text-align: center;
 }
