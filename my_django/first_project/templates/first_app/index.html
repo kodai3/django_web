@@ -2,12 +2,36 @@
 {% load staticfiles %}
 <html lang="en" dir="ltr">
   <head>
-    <link rel="stylesheet" href={% static "css/mystyle.css" %}>
     <meta charset="utf-8">
-    <title>Caho</title>
+    <title>Django Lvel Two</title>
+    <link rel="stylesheet" href="{% static "css/mystyle.css" %}">
   </head>
   <body>
-    <h1>This is singer song writter Caho</h1>
-    <img src="{% static "images/pic.jpg" %}" alt="No Pic Found!">
+    <h1>Hi Welcome</h1>
+    <h2>Here are your access records:</h2>
+
+    <div class="djangotwo">
+      {% if access_records %}
+        <table>
+          <thead>
+            <th>Site Name</th>
+            <th>Date Accessed</th>
+          </thead>
+            {% for acc in access_records %}
+            <tr>
+              <td>
+                {{ acc.name }}
+              </td>
+              <td>
+                {{ acc.date }}
+              </td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+          <p>NO ACCESS RECORDS FOUND</p>
+        {% endif %}
+    </div>
+
   </body>
 </html>
